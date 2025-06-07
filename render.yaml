@@ -1,16 +1,16 @@
 services:
   - type: web
-    name: arapsto-backend
+    name: arapstore-backend
     env: node
     plan: free
     buildCommand: npm install
     startCommand: npm start
     envVars:
       - key: MONGO_URI
-        value: your_mongodb_connection_string
+        value: mongodb+srv://Sto:Kipkorir%2E1595@cysec.jyxmnlp.mongodb.net/arapstore?retryWrites=true&w=majority&appName=CySec
       - key: NODE_ENV
         value: production
-    repo: https://github.com/ArapKBett/Sto
+    repo: https://github.com/yourusername/arapstore
     autoDeploy: true
 
   - type: web
@@ -18,5 +18,5 @@ services:
     env: static
     buildCommand: npm install && npm run build
     staticPublishPath: client/build
-    repo: https://github.com/ArapKBett/Sto
+    repo: https://github.com/yourusername/arapstore
     autoDeploy: true
