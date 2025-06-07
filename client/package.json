@@ -1,5 +1,5 @@
 {
-  "name": "arapstore-client",
+  "name": "arapstore-frontend",
   "version": "1.0.0",
   "scripts": {
     "start": "react-scripts start",
