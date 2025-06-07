@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: arapsto-backend
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: MONGO_URI
+        value: your_mongodb_connection_string
+      - key: NODE_ENV
+        value: production
+    repo: https://github.com/ArapKBett/Sto
+    autoDeploy: true
+
+  - type: web
+    name: arapstore-frontend
+    env: static
+    buildCommand: npm install && npm run build
+    staticPublishPath: client/build
+    repo: https://github.com/ArapKBett/Sto
+    autoDeploy: true
