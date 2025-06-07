@@ -10,7 +10,7 @@ services:
         value: mongodb+srv://Sto:Kipkorir%2E1595@cysec.jyxmnlp.mongodb.net/arapstore?retryWrites=true&w=majority&appName=CySec
       - key: NODE_ENV
         value: production
-    repo: https://github.com/yourusername/arapstore
+    repo: https://github.com/ArapKBett/Sto
     autoDeploy: true
 
   - type: web
@@ -18,5 +18,5 @@ services:
     env: static
     buildCommand: npm install && npm run build
     staticPublishPath: client/build
-    repo: https://github.com/yourusername/arapstore
+    repo: https://github.com/ArapKBett/Sto
     autoDeploy: true
